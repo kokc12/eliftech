@@ -2,47 +2,34 @@ import React, {Component} from 'react';
 
 class CreateHotDog extends Component {
     state = {
-        id: '',
-        title: '',
-        description: '',
-        img: ''
+        hotDogsList: []
     };
 
-    onChangeTitle = (e) => {
-        this.setState({
-            title: e.target.value
-        })
-    };
-
-    onChangeDescription = (e) => {
-        this.setState({
-            description: e.target.value
-        })
-    };
-
-    createFormSubmit = (e) => {
+    addHotDog = (e) => {
         e.preventDefault();
 
+        let title = this.refs.title.value;
+        let description = this.refs.description.value;
+
+        this.state.hotDogsList.push({title, description});
+
         this.setState({
-            id: '',
-            title: '',
-            description: '',
-            img: ''
-        })
+            hotDogsList: this.state.hotDogsList
+        });
     };
 
     render() {
         return(
             <div className="m-5">
                 <h2>Add New Hot Dog</h2>
-                <form onSubmit={this.createFormSubmit}>
+                <form onSubmit={this.addHotDog}>
                     <div className="form-group">
                         <label>Title:</label>
-                        <input type="text" className="form-control" value={this.state.title} onChange={this.onChangeTitle}/>
+                        <input type="text" className="form-control" ref="title"/>
                     </div>
                     <div className="form-group">
                         <label>Description:</label>
-                        <input type="text" className="form-control" value={this.state.description} onChange={this.onChangeDescription}/>
+                        <input type="text" className="form-control" ref="description"/>
                     </div>
                     <div className="form-group">
                         <input type="submit" className="btn btn-warning" value="Add New" />
