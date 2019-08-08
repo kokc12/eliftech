@@ -2,9 +2,11 @@
   "name": "eliftech",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kokc12.github.io/eliftech",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "firebase": "^6.3.4",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-html-id": "^0.1.5",
@@ -15,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
