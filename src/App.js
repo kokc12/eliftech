@@ -55,10 +55,10 @@ class App extends Component {
                             <div className="collapse navbar-collapse">
                                 <ul className="navbar-nav mr-auto">
                                     <li className="navbar-item">
-                                        <Link className="nav-link" to="/create">Add New</Link>
+                                        <Link className="nav-link" to="eliftech/create/">Add New</Link>
                                     </li>
                                     <li className="navbar-item">
-                                        <Link className="nav-link" to="/list">List</Link>
+                                        <Link className="nav-link" to="eliftech/list">List</Link>
                                     </li>
                                 </ul>
                             </div>
