@@ -1,42 +1,18 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import "firebase/database";
-import {firebaseConfig} from "../conf/firebaseConfig";
-import firebase from "firebase/app";
 
 class CreateHotDog extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            hotDogsList: []
-        };
-
-        this.app = firebase.initializeApp(firebaseConfig);
-        this.db = this.app.database().ref().child('hotDog');
-    }
-
-    componentWillMount() {
-        const hotDogs = this.state.hotDogsList;
-        this.db.on('child_added', snap => {
-            hotDogs.push({
-                id: snap.key,
-                title: snap.val().title,
-                description: snap.val().description
-            });
-        });
-
-        this.setState({
-            hotDogsList: hotDogs
-        });
-    };
-
     addHotDog = (e) => {
         e.preventDefault();
 
         let title = this.refs.title.value;
         let description = this.refs.description.value;
 
-        this.db.push().set({title: title, description: description});
+        this.props.db.push().set({
+            title: title,
+            description: description});
+
+        window.location.replace("/list");
     };
 
     render() {
