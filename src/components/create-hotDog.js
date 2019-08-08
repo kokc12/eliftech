@@ -12,7 +12,7 @@ class CreateHotDog extends Component {
             title: title,
             description: description});
 
-        window.location.replace("eliftech/");
+        window.location.replace("https://kokc12.github.io/eliftech");
     };
 
     render() {

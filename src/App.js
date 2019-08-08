@@ -63,7 +63,7 @@ class App extends Component {
                                 </ul>
                             </div>
                         </nav>
-                        <Route path="/" exact component={() => <HotDogsList hotDogsList={this.state.hotDogsList} db={this.db} getHotDogs={this.getHotDogs}/>} />
+                        <Route path="/eliftech" exact component={() => <HotDogsList hotDogsList={this.state.hotDogsList} db={this.db} getHotDogs={this.getHotDogs}/>} />
                         <Route path="/list" component={() => <HotDogsList hotDogsList={this.state.hotDogsList} db={this.db} getHotDogs={this.getHotDogs}/>} />
                         <Route path="/edit/:id" component={EditHotDog} />
                         <Route path="/create" component={() => <CreateHotDog db={this.db}/>} />
