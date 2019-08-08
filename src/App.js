@@ -55,18 +55,18 @@ class App extends Component {
                             <div className="collapse navbar-collapse">
                                 <ul className="navbar-nav mr-auto">
                                     <li className="navbar-item">
-                                        <Link className="nav-link" to="eliftech/create/">Add New</Link>
+                                        <Link className="nav-link" to="/create">Add New</Link>
                                     </li>
                                     <li className="navbar-item">
-                                        <Link className="nav-link" to="eliftech/list">List</Link>
+                                        <Link className="nav-link" to="/list">List</Link>
                                     </li>
                                 </ul>
                             </div>
                         </nav>
-                        <Route path="/eliftech/" exact component={() => <HotDogsList hotDogsList={this.state.hotDogsList} db={this.db} getHotDogs={this.getHotDogs}/>} />
-                        <Route path="/eliftech/list" component={() => <HotDogsList hotDogsList={this.state.hotDogsList} db={this.db} getHotDogs={this.getHotDogs}/>} />
+                        <Route path="/" exact component={() => <HotDogsList hotDogsList={this.state.hotDogsList} db={this.db} getHotDogs={this.getHotDogs}/>} />
+                        <Route path="/list" component={() => <HotDogsList hotDogsList={this.state.hotDogsList} db={this.db} getHotDogs={this.getHotDogs}/>} />
                         <Route path="/edit/:id" component={EditHotDog} />
-                        <Route path="/eliftech/create" component={() => <CreateHotDog db={this.db}/>} />
+                        <Route path="/create" component={() => <CreateHotDog db={this.db}/>} />
                     </div>
                 </div>
             </Router>
