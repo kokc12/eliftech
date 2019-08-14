@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from "firebase/app";
 import "firebase/database";
+import { Link } from "react-router-dom";
 
 class HotDogsList extends Component {
 
@@ -18,6 +19,7 @@ class HotDogsList extends Component {
                             <h3>{hotDog.title}</h3>
                             <p>{hotDog.description}</p>
                             <button className="btn btn-danger" onClick={() => this.deleteHotDog(hotDog.id)}>Delete</button>
+                            <Link to={"/edit/" + hotDog.id}><button className="btn btn-primary m-2">Edit</button></Link>
                         </li>)}
                 </ul>
             </div>

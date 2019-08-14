@@ -49,7 +49,7 @@ class App extends Component {
                 <div className="App">
                     <div className="container">
                         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                            <Link className="navbar-brand" to="/eliftech">
+                            <Link className="navbar-brand" to="https://kokc12.github.io/eliftech">
                                 <img src={logo} alt="hot-dog" height="32" width="32" />
                             </Link>
                             <div className="collapse navbar-collapse">
