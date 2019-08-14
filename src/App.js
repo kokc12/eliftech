@@ -64,9 +64,9 @@ class App extends Component {
                             </div>
                         </nav>
                         <Route path="/eliftech" exact component={() => <HotDogsList hotDogsList={this.state.hotDogsList} db={this.db} getHotDogs={this.getHotDogs}/>} />
-                        <Route path="/eliftech/list" component={() => <HotDogsList hotDogsList={this.state.hotDogsList} db={this.db} getHotDogs={this.getHotDogs}/>} />
-                        <Route path="/eliftech/edit/:id" component={EditHotDog} />
-                        <Route path="/eliftech/create" component={() => <CreateHotDog db={this.db}/>} />
+                        <Route path="/list" component={() => <HotDogsList hotDogsList={this.state.hotDogsList} db={this.db} getHotDogs={this.getHotDogs}/>} />
+                        <Route path="/edit/:id" component={EditHotDog} />
+                        <Route path="/create" component={() => <CreateHotDog db={this.db}/>} />
                     </div>
                 </div>
             </Router>
