@@ -49,24 +49,24 @@ class App extends Component {
                 <div className="App">
                     <div className="container">
                         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                            <Link className="navbar-brand" to="https://kokc12.github.io/eliftech">
+                            <Link className="navbar-brand" to="/eliftech">
                                 <img src={logo} alt="hot-dog" height="32" width="32" />
                             </Link>
                             <div className="collapse navbar-collapse">
                                 <ul className="navbar-nav mr-auto">
                                     <li className="navbar-item">
-                                        <Link className="nav-link" to="/create">Add New</Link>
+                                        <Link className="nav-link" to="https://kokc12.github.io/eliftech/create">Add New</Link>
                                     </li>
                                     <li className="navbar-item">
-                                        <Link className="nav-link" to="/list">List</Link>
+                                        <Link className="nav-link" to="https://kokc12.github.io/eliftech/list">List</Link>
                                     </li>
                                 </ul>
                             </div>
                         </nav>
                         <Route path="/eliftech" exact component={() => <HotDogsList hotDogsList={this.state.hotDogsList} db={this.db} getHotDogs={this.getHotDogs}/>} />
-                        <Route path="/list" component={() => <HotDogsList hotDogsList={this.state.hotDogsList} db={this.db} getHotDogs={this.getHotDogs}/>} />
-                        <Route path="/edit/:id" component={EditHotDog} />
-                        <Route path="/create" component={() => <CreateHotDog db={this.db}/>} />
+                        <Route path="https://kokc12.github.io/eliftech/list" component={() => <HotDogsList hotDogsList={this.state.hotDogsList} db={this.db} getHotDogs={this.getHotDogs}/>} />
+                        <Route path="https://kokc12.github.io/eliftech/edit/:id" component={EditHotDog} />
+                        <Route path="https://kokc12.github.io/eliftech/create" component={() => <CreateHotDog db={this.db}/>} />
                     </div>
                 </div>
             </Router>
