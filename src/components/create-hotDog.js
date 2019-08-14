@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import "firebase/database";
 
 class CreateHotDog extends Component {
+    state = {
+        checkInput: ''
+    };
+
+    checkIfEmpty = (e) => {
+        this.setState({
+            checkInput: e.target.value
+        })
+    };
+
     addHotDog = (e) => {
         e.preventDefault();
 
@@ -22,14 +32,14 @@ class CreateHotDog extends Component {
                 <form onSubmit={this.addHotDog}>
                     <div className="form-group">
                         <label>Title:</label>
-                        <input type="text" className="form-control" ref="title"/>
+                        <input type="text" className="form-control" onChange={this.checkIfEmpty} ref="title"/>
                     </div>
                     <div className="form-group">
                         <label>Description:</label>
-                        <input type="text" className="form-control" ref="description"/>
+                        <input type="text" className="form-control" onChange={this.checkIfEmpty} ref="description"/>
                     </div>
                     <div className="form-group">
-                        <input type="submit" className="btn btn-warning" value="Add New" />
+                        <input type="submit" className="btn btn-warning" disabled={!this.state.checkInput} value="Add New" />
                     </div>
                 </form>
             </div>
