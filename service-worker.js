@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/eliftech/precache-manifest.c170e4acdec16dce0762c03e53fa3aaf.js"
+  "/eliftech/precache-manifest.e3d7f250fea6cdd964a52d3d6f63ede9.js"
 );
 
 self.addEventListener('message', (event) => {
