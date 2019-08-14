@@ -26,7 +26,7 @@ class EditHotDog extends Component {
 
         firebase.database().ref().child('/hotDogs/' + this.state.id).update({ title: title, description: description });
 
-        window.location.replace("https://kokc12.github.io/eliftech/list");
+        window.location.replace("https://kokc12.github.io/eliftech");
     };
 
     render() {
