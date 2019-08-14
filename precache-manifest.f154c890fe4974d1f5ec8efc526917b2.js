@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d19d35dd1da96d884898d7e3a45759af",
+    "revision": "e3cea341e75965fe2f4bd1938bbfbcf1",
     "url": "/eliftech/index.html"
   },
   {
-    "revision": "8b1be7d8f90f6b5a2489",
+    "revision": "7e5d4d4488f0b3a8e19a",
     "url": "/eliftech/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "c74120e5c44a7049a72a",
+    "revision": "7e304e368411fabeda84",
     "url": "/eliftech/static/css/main.6942973f.chunk.css"
   },
   {
-    "revision": "8b1be7d8f90f6b5a2489",
-    "url": "/eliftech/static/js/2.f9c59c02.chunk.js"
+    "revision": "7e5d4d4488f0b3a8e19a",
+    "url": "/eliftech/static/js/2.ba1bc9f9.chunk.js"
   },
   {
-    "revision": "c74120e5c44a7049a72a",
-    "url": "/eliftech/static/js/main.3ed0fe41.chunk.js"
+    "revision": "7e304e368411fabeda84",
+    "url": "/eliftech/static/js/main.2fef6d31.chunk.js"
   },
   {
     "revision": "c8dd443bc515ce7e1544",
