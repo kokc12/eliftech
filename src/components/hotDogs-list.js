@@ -12,17 +12,26 @@ class HotDogsList extends Component {
 
     render() {
         return(
-            <div className="m-5">
-                <ul className="list-group list-group-flush">
+            <main>
+                <div className="main-box">
                     {this.props.hotDogsList.map((hotDog) =>
-                        <li className="list-group-item" key={hotDog.id}>
-                            <h3>{hotDog.title}</h3>
-                            <p>{hotDog.description}</p>
-                            <button className="btn btn-danger" onClick={() => this.deleteHotDog(hotDog.id)}>Delete</button>
-                            <Link to={"/edit/" + hotDog.id}><button className="btn btn-primary m-2">Edit</button></Link>
-                        </li>)}
-                </ul>
-            </div>
+                        <div className="box-item" key={hotDog.id}>
+                            <div className="item-wrap">
+                                <div className="item-title">
+                                    <h4>{hotDog.title}</h4>
+                                </div>
+                                <div className="item-text">
+                                    <p>{hotDog.description}</p>
+                                </div>
+                            </div>
+                            <div className="box-btn">
+                                <button className="btn-item" onClick={() => this.deleteHotDog(hotDog.id)}>Delete</button>
+                                <Link to={"/edit/" + hotDog.id}><button className="btn-item">Edit</button></Link>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            </main>
         )
     }
 }

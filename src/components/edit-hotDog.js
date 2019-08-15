@@ -31,21 +31,17 @@ class EditHotDog extends Component {
 
     render() {
         return(
-            <div className="m-5">
-                <h2>Edit Hot Dog</h2>
-                <form onSubmit={this.editHotDog}>
-                    <div className="form-group">
+            <div className="main-box">
+                <div className="box-item">
+                    <h2>Edit Hot Dog</h2>
+                    <form onSubmit={this.editHotDog}>
                         <label>Title:</label>
-                        <input type="text" className="form-control" ref="title"/>
-                    </div>
-                    <div className="form-group">
+                        <input type="text" ref="title"/>
                         <label>Description:</label>
-                        <input type="text" className="form-control" ref="description"/>
-                    </div>
-                    <div className="form-group">
-                        <input type="submit" className="btn btn-warning" value="Edit" />
-                    </div>
-                </form>
+                        <input type="text" ref="description"/>
+                        <input type="submit" className="btn-item" value="Edit" />
+                    </form>
+                </div>
             </div>
         )
     }

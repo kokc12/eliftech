@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import firebase from "firebase/app";
 import { firebaseConfig } from "./conf/firebaseConfig";
 import "./css/style.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import logo from "./img/hot-dog.png";
 import HotDogsList from "./components/hotDogs-list";
 import EditHotDog from "./components/edit-hotDog";
 import CreateHotDog from "./components/create-hotDog";
@@ -47,27 +45,23 @@ class App extends Component {
         return (
             <Router>
                 <div className="App">
-                    <div className="container">
-                        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                            <Link className="navbar-brand" to="/eliftech">
-                                <img src={logo} alt="hot-dog" height="32" width="32" />
-                            </Link>
-                            <div className="collapse navbar-collapse">
-                                <ul className="navbar-nav mr-auto">
-                                    <li className="navbar-item">
-                                        <Link className="nav-link" to="/create">Add New</Link>
-                                    </li>
-                                    <li className="navbar-item">
-                                        <Link className="nav-link" to="/list">List</Link>
-                                    </li>
-                                </ul>
+                    <header className="header">
+                        <div className="header-box">
+                            <div className="header-wrap">
+                                <h1><a href="/eliftech">Hot<span>DOG</span></a></h1>
+                                <nav>
+                                    <ul>
+                                        <li><Link to="/create">Add New</Link></li>
+                                        <li><Link to="/list">List</Link></li>
+                                    </ul>
+                                </nav>
                             </div>
-                        </nav>
-                        <Route path="/eliftech" exact component={() => <HotDogsList hotDogsList={this.state.hotDogsList} db={this.db} getHotDogs={this.getHotDogs}/>} />
-                        <Route path="/list" component={() => <HotDogsList hotDogsList={this.state.hotDogsList} db={this.db} getHotDogs={this.getHotDogs}/>} />
-                        <Route path="/edit/:id" component={EditHotDog} />
-                        <Route path="/create" component={() => <CreateHotDog db={this.db}/>} />
-                    </div>
+                        </div>
+                    </header>
+                    <Route path="/eliftech" exact component={() => <HotDogsList hotDogsList={this.state.hotDogsList} db={this.db} getHotDogs={this.getHotDogs}/>} />
+                    <Route path="/list" component={() => <HotDogsList hotDogsList={this.state.hotDogsList} db={this.db} getHotDogs={this.getHotDogs}/>} />
+                    <Route path="/edit/:id" component={EditHotDog} />
+                    <Route path="/create" component={() => <CreateHotDog db={this.db}/>} />
                 </div>
             </Router>
         );

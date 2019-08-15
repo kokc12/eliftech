@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 1em;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+}
+body {
+    color: #fff;
+    margin: 0 auto;
+    max-width: 1400px;
+    background: url(../img/bg-img.jpg) fixed no-repeat;
+    height: 400px;
+    background-size: cover;
+    background-color: lightyellow;
+}
+header {
+    vertical-align: center;
+}
+h1 {
+    display: inline-block;
+}
+h1 > a {
+    font-size: 3.5vw;
+    text-decoration: none;
+    font-weight: 100;
+    color: #fff;
+    border-bottom: 1px solid yellow;
+}
+h2 {
+    font-size: 2.3vw;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.header-box {
+    padding: 5px 30px;
+}
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-wrap span {
+    color: maroon;
+}
+.header-wrap nav {
+    float: right;
+}
+.header-wrap nav li {
+    display: inline-block;
+    font-size: 1.5vw;
+}
+.header-wrap nav li a {
+    color: #fff;
+    margin-right: 10px;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 10px 35px;
+    opacity: 0.9;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+.header-wrap nav li a:hover {
+    background-color: maroon;
+    cursor: pointer;
+}
+.header-wrap ul {
+    list-style: none;
+    margin: 0;
+}
+.main-wrap {
+    margin-top: 30px;
+    padding-left: 30px;
+}
+input {
+    display: block;
+    margin: 10px 0px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 yellow;
+    border: none;
+    background-image: none;
+    background-color: lightyellow;
+    outline: none;
+}
+textarea {
+    display: block;
+    margin: 20px 0px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 yellow;
+    border: none;
+    background-image: none;
+}
+.btn-add {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: yellow;
+    font-weight: bold;
+    color: red;
+    transition: 0.2s;
+}
+.btn-add:hover {
+    box-shadow: 0 0 10px 0 yellow inset, 0 0 10px 4px yellow;
+    background-color: yellow;
+}
+
+/*-------------------------------- List page  */
+
+.main-box {
+    margin-top: 30px;
+    padding: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box-item {
+    width: 30%;
+    height: auto;
+    margin-left: 2%;
+}
+.item-wrap {
+    display: flex;
+    flex-direction: column;
+    background-color: lightyellow;
+    border: 2px solid maroon;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+.item-title {
+    text-align: center;
+    margin: 10px 0;
+    border: 1px solid red;
+    background-color: red;
+    font-size: 2vw;
+}
+.item-text {
+    text-align: justify;
+    margin: 0 20px;
+    font-size: 1.5vw;
+    color: chocolate;
+}
+.box-btn {
+    display: flex;
+    justify-content: space-between;
+}
+.btn-item {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: yellow;
+    font-weight: bold;
+    color: red;
+    margin: 10px 0;
+    transition: 0.2s;
+    cursor: pointer;
+    border: none;
+}
+.btn-item:hover {
+    box-shadow: 0 0 10px 0 yellow inset, 0 0 10px 4px yellow;
+    background-color: yellow;
+}

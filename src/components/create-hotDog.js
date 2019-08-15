@@ -27,21 +27,17 @@ class CreateHotDog extends Component {
 
     render() {
         return(
-            <div className="m-5">
-                <h2>Add New Hot Dog</h2>
-                <form onSubmit={this.addHotDog}>
-                    <div className="form-group">
+            <div className="main-box">
+                <div className="box-item">
+                    <h2>Add New Hot Dog</h2>
+                    <form onSubmit={this.addHotDog}>
                         <label>Title:</label>
-                        <input type="text" className="form-control" onChange={this.checkIfEmpty} ref="title"/>
-                    </div>
-                    <div className="form-group">
+                        <input type="text" onChange={this.checkIfEmpty} ref="title"/>
                         <label>Description:</label>
-                        <input type="text" className="form-control" onChange={this.checkIfEmpty} ref="description"/>
-                    </div>
-                    <div className="form-group">
-                        <input type="submit" className="btn btn-warning" disabled={!this.state.checkInput} value="Add New" />
-                    </div>
-                </form>
+                        <input type="text" onChange={this.checkIfEmpty} ref="description"/>
+                        <input type="submit" className="btn-item" disabled={!this.state.checkInput} value="Add New" />
+                    </form>
+                </div>
             </div>
         )
     }
